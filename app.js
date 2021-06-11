@@ -13,25 +13,18 @@ const initializePassport = require("./passportConfig");
 
 initializePassport(passport);
 
-// Middleware
 
-// Parses details from a form
 app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 
 app.use(
     session({
-    // Key we want to keep secret which will encrypt all of our information
     secret: process.env.SESSION_SECRET,
-    // Should we resave our session variables if nothing has changes which we dont
     resave: false,
-    // Save empty value if there is no value which we do not want to do
     saveUninitialized: false
     })
 );
-// Function inside passport which initializes passport
 app.use(passport.initialize());
-// Store our variables to be persisted across the whole session. Works with app.use(Session) above
 app.use(passport.session());
 app.use(flash());
 
@@ -44,7 +37,6 @@ app.get("/users/register", checkAuthenticated, (req, res) => {
 });
 
 app.get("/users/login", checkAuthenticated, (req, res) => {
-  // flash sets a messages variable. passport sets the error message
     console.log(req.session.flash.error);
     res.render("login.ejs");
 });
@@ -88,7 +80,6 @@ app.post("/users/register", async (req, res) => {
     } else {
     hashedPassword = await bcrypt.hash(password, 10);
     console.log(hashedPassword);
-    // Validation passed
     pool.query
     (
       `SELECT * FROM users
@@ -100,8 +91,6 @@ app.post("/users/register", async (req, res) => {
             console.log("ERROR")
             console.log(err);
         }
-        console.log("hi");
-        console.log(results);
         console.log(results.rows);
 
         if (results.rows.length > 0) {
