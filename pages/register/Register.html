@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles/register.css">
+    <title>Register</title>
+</head>
+<body>
+
+    <ul id="error_reg">
+        <li></li>
+    </ul>
+
+<div class="main-container">
+    
+    <div class="signUpcontainer">
+        <form action"/users/register" method="post">
+            <div class="signUp">Sign Up</div>
+
+            <input
+            type="email"
+            placeholder="Enter your Email-ID"
+            name="email"
+            id="email"
+            class="userSignUp"
+            maxlength="30"
+            required
+            />
+    
+            <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Set Password"
+            class="userSignUp"
+            maxlength="30"
+            required
+            />
+    
+            <input
+            type="password"
+            id="password2"
+            name="password2"
+            placeholder="Confirm Password"
+            class="userSignUp"
+            maxlength="30"
+            required
+            />
+    
+            <div class="sign-up-button">
+                <input type="submit" value="Register" />
+            </div>
+    
+            <a href="/users/login">Already Registered? Login Here</a>
+        
+        </form>
+
+
+</div>
+<script src="./register.js"></script>
+</body>
+</html>

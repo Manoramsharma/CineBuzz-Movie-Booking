@@ -10,53 +10,58 @@
     <title>SignIn</title>
 </head>
 <body>
+
+    <ul id="error_ul">
+        <li>aab</li>
+        <li>aaba</li>
+    </ul>
+
+    <ul id="success_ul">
+        <li>abababa</li>
+    </ul>
+
+    <ul id="err_ul">
+        <li>aaaa</li>
+    </ul>
+
+
 <div class="main-container">
     <div class="signIncontainer">
+        <form action="/users/login" method="POST">
         <div class="signIN">Sign In</div>
         <input
-        type="text"
-        placeholder="Enter your username"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your Email-ID"
         class="loginCard"
         maxlength="30"/>
 
         <input
         type="password"
+        id="password"
+        name="password"
         placeholder="Enter your password"
         class="passwordLogin"
         maxlength="30"/>
 
-        <div class="sign-in-button">Login</div>
+        <div>
+            <input 
+            class="sign-in-button"
+            type="submit"
+            value="Login"/>
+        </div>
     </div>
+    
+</form>
+    
 
-    <div class="signUpcontainer">
-        <div class="signUp">Sign Up</div>
-
-        <input
-        type="text"
-        placeholder="Set your UserId"
-        class="userSignUp"
-        maxlength="30"/>
-
-        <input
-        type="password"
-        placeholder="Set  Password"
-        class="userSignUp"
-        maxlength="30"/>
-
-        <input
-        type="password"
-        placeholder="Confirm Password"
-        class="userSignUp"
-        maxlength="30"/>
-
-        <div class="sign-up-button">Create Account</div>
-    </div>
 </div>
 
 
 
 
 
-    <script src="../loginPage/index.js"></script>
+    <script src="./login.js"></script>
 </body>
 </html>
