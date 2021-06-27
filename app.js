@@ -4,12 +4,16 @@ const bcrypt = require("bcrypt");
 const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session");
+const jwt = require("jsonwebtoken");
+
 require("dotenv").config();
 const app = express();
 
 const MovieController= require("./controllers/MovieController");
 
 const MovieDetailController=require("./controllers/MovieDetailController");
+
+const BookingController=require("./controllers/BookingController");
 
 const PORT = process.env.PORT || 3000;
 
@@ -38,6 +42,12 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
+
+exports.signUp = (req,res) => {
+    
+}
+
+
 
 app.get("/", (req, res) => 
 {
@@ -170,6 +180,12 @@ app.route('/movieList')
 
 app.route('/movieList/:movie_id')
         .get(MovieDetailController.getMovieDetail);
+
+app.route('/createBooking')
+        .post(BookingController.createBooking);
+
+app.route('/userBookings/:user_id')
+        .get(BookingController.getBooking);       
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
