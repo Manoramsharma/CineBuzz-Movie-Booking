@@ -7,6 +7,10 @@ const { pool }= require("../configs/db");
 exports.signUp = (req, res) =>{
   const { name, email, password } = req.body;
 
+  console.log({ name, email, password})
+
+  // validate if all name email password are non null
+
   pool
     .query(`SELECT * FROM users WHERE email = '${email}';`)
     .then((data) => {
@@ -16,8 +20,9 @@ exports.signUp = (req, res) =>{
         res.status(400).json({
           error: "User already exists.",
         });
-      } else
-       {
+      } 
+      else
+      {
         bcrypt.hash(password, 10, (err, hash) => {
           if (err) {
             res.status(500).json({
@@ -49,6 +54,7 @@ exports.signUp = (req, res) =>{
               });
             })
             .catch((err) => {
+              console.log(err)
               res.status(500).json({
                 error: "Database error occurred!",
               });
@@ -57,6 +63,7 @@ exports.signUp = (req, res) =>{
       }
     })
     .catch((err) => {
+      console.log(err)
       res.status(500).json({
         error: "Database error occurred!",
       });
@@ -65,6 +72,7 @@ exports.signUp = (req, res) =>{
 
 exports.signIn = (req, res) => {
   const { email, password } = req.body;
+
 
   pool
     .query(`SELECT * FROM users WHERE email = '${email}';`)
@@ -101,17 +109,9 @@ exports.signIn = (req, res) => {
       }
     })
     .catch((err) => {
+      console.log(err)
       res.status(500).json({
         error: "Database error occurred!",
       });
     });
 };
-
-
-//middleWares
-function authenticateToken(req,res,next)
-{
-
-
-}
-

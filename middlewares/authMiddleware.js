@@ -5,7 +5,7 @@ exports.verifyToken = (req, res, next) => {
   const token = req.headers.authorization;
   jwt.verify(token, process.env.SECRET_KEY, (err, decoded) => {
     if (err) {
-      res.status(500).json({ error: "Server error occured" });
+      res.status(500).json({ error: "Login required" });
     }
     const userEmail = decoded.email;
 
@@ -16,8 +16,11 @@ exports.verifyToken = (req, res, next) => {
           res.status(400).json({
             message: "Invalid token",
           });
-        } else {
+        } else 
+        {
+          const userData = data.rows[0]
           req.email = userEmail;
+          req.user_id = userData.id;
           next();
         }
       })
