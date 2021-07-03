@@ -10,6 +10,7 @@ const MovieController= require("./controllers/MovieController");
 const MovieDetailController=require("./controllers/MovieDetailController");
 const AuthController=require("./controllers/AuthController");
 const BookingController=require("./controllers/BookingController");
+const RatingController=require("./controllers/RatingController");
 
 const PORT = process.env.PORT || 3000;
 const { verifyToken } = require("./middlewares/authMiddleware");
@@ -27,6 +28,9 @@ app.route('/createBooking')
 
 app.route('/userBookings/:user_id')
         .get(BookingController.getBooking);  
+
+app.route('/giveRating')
+        .post(verifyToken, RatingController.giveRating);
 
 app.route('/signup').post(AuthController.signUp); 
 

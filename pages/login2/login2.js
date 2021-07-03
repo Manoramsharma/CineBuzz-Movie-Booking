@@ -1,5 +1,5 @@
 const body = document.querySelector("body");
-const submit=document.querySelector(".sign-in-button");
+const submit=document.querySelector(".submit");
 
 
 submit.addEventListener("click", () => {

@@ -1,4 +1,6 @@
 const typedTextSpan = document.querySelector(".typed-text");
+const body= document.querySelector("body");
+const explore= document.querySelector(".btn-flip");
 const cursorSpan = document.querySelector(".cursor");
 
 const textArray = ["Shows", "Movies", "Thrill", "Action"];
@@ -39,3 +41,22 @@ function erase() {
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
   if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
+
+
+window.addEventListener("load", () => {
+  body.classList.add("visible");
+
+  if (token) {
+    location.href = "/pages/dashboard/dashboard.html";
+  }
+});
+
+explore.addEventListener("click", () => {
+    location.href = "/pages/login2/login2.html";
+});
+  
+
+
+
+
+
