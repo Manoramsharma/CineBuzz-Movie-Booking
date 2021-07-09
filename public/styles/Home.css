@@ -116,28 +116,28 @@ button {
 .card1 {
   position: absolute;
   top: 15%;
-  left: 54%;
+  left: 62%;
   background-image: url(/public/images/blackWidow.jpg);
   cursor: pointer;
 }
 .card2 {
   position: absolute;
   top: 15%;
-  left: 69%;
+  left: 77%;
   background-image: url(/public/images/eternals1.jpg);
   cursor: pointer;
 }
 .card3 {
   position: absolute;
   top: 55%;
-  left: 54%;
+  left: 62%;
   background-image: url(/public/images/brahmastra.jpg);
   cursor: pointer;
 }
 .card4 {
   position: absolute;
   top: 55%;
-  left: 69%;
+  left: 77%;
   background-image: url(/public/images/suicide\ squad.jpg);
   cursor: pointer;
 }

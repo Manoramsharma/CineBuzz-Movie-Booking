@@ -22,7 +22,7 @@ const { verifyToken } = require("./middlewares/authMiddleware");
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "./pages/home1/home2.html"));
+  res.sendFile(path.join(__dirname, "./pages/home/home.html"));
 });
 
 app.get("/home", function (req, res) {

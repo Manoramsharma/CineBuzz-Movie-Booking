@@ -21,7 +21,7 @@ header{
     padding:1rem;
     display:flex;
     justify-content: flex-end;
-    background-color: var(--secondary-color);
+    background-color: black;
 }
 
 .search{
@@ -122,10 +122,11 @@ main{
 }
 
 .tag{
-    color:white;
+    color:#800080;
     padding:10px 20px;
-    background-color: orange;
+    background-color: black;
     border-radius: 50px;
+    border: 3px solid #800080;
     margin:5px;
     display:inline-block;
     cursor: pointer;
@@ -192,10 +193,10 @@ main{
   /* Position the content inside the overlay */
   .overlay-content {
     position: relative;
-    top: 10%; /* 25% from the top */
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    top: 10%; 
+    width: 100%; 
+    text-align: center; 
+    margin-top: 30px; 
   }
   
   /* The navigation links inside the overlay */
@@ -204,16 +205,14 @@ main{
     text-decoration: none;
     font-size: 36px;
     color: #818181;
-    display: block; /* Display block instead of inline */
-    transition: 0.3s; /* Transition effects on hover (color) */
+    display: block; 
+    transition: 0.3s; 
   }
   
-  /* When you mouse over the navigation links, change their color */
   .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
   }
   
-  /* Position the close button (top right corner) */
   .overlay .closebtn {
     position: absolute;
     top: 20px;

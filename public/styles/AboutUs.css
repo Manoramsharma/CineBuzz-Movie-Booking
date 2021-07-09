@@ -1,26 +1,26 @@
 body {
     margin: 0;
-    min-height: 60vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #e84393;
-    background-image: linear-gradient(315deg, #cf8aac 0%, #000000 74%);
+    background-image: linear-gradient(315deg, #e84393 0%, #000000 74%);
     
   }
   
   .section-heading {
-    font-family: "Dancing Script", cursive;
+    font-family: "Arvo", serif;
     text-align: center;
-    font-size: 64px;
-    color: #10996d;
+    font-size: 60px;
+    color: #800080;
     margin: 0 0 70px;
   }
   
   .container {
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: 50%;
     max-width: 1440px;
     margin: 0 auto;
   }
@@ -36,8 +36,9 @@ body {
   
   .profile img {
     max-width: 100%;
+    
     border-radius: 50%;
-    border: 5px solid #f7f7f7;
+    border: 5px solid #fff;
     filter: drop-shadow(-20px 0 10px rgba(0, 0, 0, 0.1));
     cursor: pointer;
   }
@@ -48,8 +49,8 @@ body {
   
   .profile .name {
     position: absolute;
-    background-color: #10996d;
-    color: #fff;
+    background-color: black;
+    color: #800080;
     font-family: "Bebas Neue", cursive;
     padding: 15px 30px;
     border-radius: 100px;
@@ -66,7 +67,7 @@ body {
     content: "";
     position: absolute;
     width: 15px; height: 15px;
-    background-color: #10996d;
+    background-color: black;
     top: 0; left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
   }
