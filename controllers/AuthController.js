@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { pool }= require("../configs/db");
 
+
 exports.signUp = (req, res) =>{
   const { name, email, password } = req.body;
 

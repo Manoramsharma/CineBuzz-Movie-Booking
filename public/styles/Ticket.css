@@ -5,7 +5,11 @@
 }
 
 body{
-    background-color: #242333;
+    /*background-color: #242333;*/
+    
+    background-color: #e84393;
+    background-image: linear-gradient(315deg, #e84393 0%, #000000 74%);
+    font-family: 'Ubuntu', sans-serif;
     display : flex;
     flex-direction: column;
     color:white;
@@ -129,5 +133,130 @@ p.text span
 }
 
 
+.button
+{
+    position: absolute;
+    top: 92%;
+    left: 50%;
+
+    transform: translateX(-50%) translateY(-50%);
+    background: #fff;
+    height: 34px;
+    width: 250px;
+    border-radius: 12px;
+    padding: 0px 50px;
+    border: 3px solid #8b008b;
+    color: #800080;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 2;
+}
+.button:after, .button:before 
+{
+    
+    top: 100%;
+    left: 0;
+    bottom: -10px;
+    content: '';
+    z-index: 1;
+}
+.button:before {
+    background: BLACK;
+    top: 10px;
+    left: -1px;
+    height: 100%;
+    width: 15px;
+}
+.button:after {
+    background: BLACK;
+    right: 0px;
+    left: -1px;
+    height: 15px;
+}
+.button:hover {
+    background: BLACK;
+    color: #800080;
+    margin-bottom: -1px;
+}
+.button:hover:after, .button:hover:before {
+    top: 100%;
+    left: 0;
+    bottom: 0px;
+}
+.button:hover:before {
+    top: 0px;
+    left: 0px;
+    width: 0px;
+}
+.button:hover:after {
+    right: 0px;
+    left: 0px;
+    height: 0px;
+}
 
 
+
+
+
+.logout
+{
+    position: absolute;
+    top: 7%;
+    left: 93%;
+
+    transform: translateX(-50%) translateY(-50%);
+    background: #fff;
+    height: 31px;
+    width: 150px;
+    border-radius: 12px;
+    padding: 0px 50px;
+    border: 3px solid #8b008b;
+    color: #800080;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 2;
+}
+.logout:after, .logout:before 
+{
+    
+    top: 100%;
+    left: 0;
+    bottom: -10px;
+    content: '';
+    z-index: 1;
+}
+.logout:before {
+    background: BLACK;
+    top: 10px;
+    left: -1px;
+    height: 100%;
+    width: 15px;
+}
+.logout:after {
+    background: BLACK;
+    right: 0px;
+    left: -1px;
+    height: 15px;
+}
+.logout:hover {
+    background: BLACK;
+    color: #800080;
+    margin-bottom: -1px;
+}
+.logout:hover:after, .logout:hover:before {
+    top: 100%;
+    left: 0;
+    bottom: 0px;
+}
+.logout:hover:before {
+    top: 0px;
+    left: 0px;
+    width: 0px;
+}
+.logout:hover:after {
+    right: 0px;
+    left: 0px;
+    height: 0px;
+}

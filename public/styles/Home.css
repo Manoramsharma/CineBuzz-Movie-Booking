@@ -1,220 +1,205 @@
-*{
-    margin: 0;
-    padding : 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.container
-{
-    width : 100%;
-    height : 100vh;
-    /*background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/movieBG.jpg);*/
-    background: #000;
-    background-position: center ;
-    background-size: cover;
-    padding-left: 8%;
-    padding-right: 8%;
-    box-sizing: border-box;
+body {
+  background-color: #e84393;
+  background-image: linear-gradient(315deg, #e84393 0%, #000000 74%);
 }
-.navbar
-{
-    height: 15%;
-    display: flex;
-    align-items: center;
+.container {
+  width: 100%;
+  height: 100vh;
+  /*background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/movieBG.jpg);*/
+  /*background: #000;*/
+  background-position: center;
+  background-size: cover;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
 }
-.logo
-{
-    width:180px;
-    height: 210px;
-    cursor:pointer;
+.navbar {
+  height: 15%;
+  display: flex;
+  align-items: center;
 }
-.menu-icon
-{
-    width: 70px;
-    cursor:pointer;
-    margin-left: 50px;
+.logo {
+  width: 180px;
+  height: 210px;
+  cursor: pointer;
 }
-nav
-{
-    flex: 1;
-    text-align: right;
+.menu-icon {
+  width: 70px;
+  cursor: pointer;
+  margin-left: 50px;
 }
-nav ul li
-{
-    list-style: none;
-    display: inline-block;
-    margin-left: 60px;
-    font-family: 'Staatliches', cursive;
+nav {
+  flex: 1;
+  text-align: right;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 60px;
+  font-family: "Staatliches", cursive;
 }
 
-nav ul li a
-{
-    text-decoration: none;
-    color: #fff;
-    font-size: 26px;
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 26px;
 }
 
-.row
-{
-    display:flex;
-    height: 85%;
-    align-items : center;
-    
+.row {
+  display: flex;
+  height: 85%;
+  align-items: center;
 }
 
-.col
-{
-    flex-basis: 50%;
+.col {
+  flex-basis: 50%;
 }
 
-h1
-{
-    font-size: 100px;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: white;
-
-
-
+h1 {
+  font-size: 80px;
+  font-family: "Arvo", serif;
+  color: white;
 }
 
-p
-{
-    color: #fff;
-    font-size: 15px;
-    line-height: 18px;
-    font-family: 'Roboto Condensed', sans-serif;
-
-    
-    
-}
-
-button
-{
-    color : #000;
-    font-size: 32px;
-    padding: 15px ;
-    background: #fff;
-    font-weight: bold;
-    border: 5px;
-    border-radius: 20px;
-    outline: none;
-    margin-top: 70px;
-    margin-left: 140px;
-    font-family: 'Staatliches', cursive;
-
-
-}
-
-.card
-{
-    width: 190px;
-    height: 260px;
-    display: inline-block;
-    border-radius: 12px;
-    padding: 18px 25px;
-    box-sizing: border-box;
+a:hover{
     cursor: pointer;
-    margin: 10px 15px;
-    background-position: center;
-    background-size: cover;
 }
-.card1
-{
-    background-image: url(/public/images/blackWidow.jpg);
-    cursor:pointer;
 
-    
-
+#cine {
+  font-size: 100px;
+  font-family: "Arvo", serif;
+  color: #800080;
 }
-.card2
-{
-    background-image: url(/public/images/eternals1.jpg);
-    cursor:pointer;
-
+#buzz {
+  font-size: 100px;
+  font-family: "Arvo", serif;
+  color: black;
 }
-.card3
-{
-    background-image: url(/public/images/brahmastra.jpg);
-    cursor:pointer;
 
-
+p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 18px;
+  font-family: "Roboto Condensed", sans-serif;
 }
-.card4
-{
-    background-image: url(/public/images/suicide\ squad.jpg);
-    cursor:pointer;
 
+button {
+  color: #000;
+  font-size: 27px;
+  padding: 15px;
+  background: #fff;
+  font-weight: bold;
+  border: 5px;
+  border-radius: 20px;
+  outline: none;
+  margin-top: 70px;
+  margin-left: 140px;
+  font-family: "Staatliches", cursive;
+}
 
+.card {
+  width: 210px;
+  height: 300px;
+  display: inline-block;
+  border-radius: 12px;
+  padding: 18px 25px;
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+}
+.card1 {
+  position: absolute;
+  top: 15%;
+  left: 54%;
+  background-image: url(/public/images/blackWidow.jpg);
+  cursor: pointer;
+}
+.card2 {
+  position: absolute;
+  top: 15%;
+  left: 69%;
+  background-image: url(/public/images/eternals1.jpg);
+  cursor: pointer;
+}
+.card3 {
+  position: absolute;
+  top: 55%;
+  left: 54%;
+  background-image: url(/public/images/brahmastra.jpg);
+  cursor: pointer;
+}
+.card4 {
+  position: absolute;
+  top: 55%;
+  left: 69%;
+  background-image: url(/public/images/suicide\ squad.jpg);
+  cursor: pointer;
 }
 
 /* For Animation on Card*/
 
-.is-active 
-{
-    box-shadow: 0 20px 5px -10px rgba(#000, 0.4);
-    transform: translateY(10px);
+.is-active {
+  box-shadow: 0 20px 5px -10px rgba(#000, 0.4);
+  transform: translateY(10px);
 }
 
-.button
-{
-
-    transform: translateX(-50%) translateY(-50%);
-    background: #fff;
-    width: 300px;
-    padding: 0px 50px;
-    border: 6px solid #4ac0ee;
-    color: #4ac0ee;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    z-index: 2;
+.button {
+  transform: translateX(-50%) translateY(-50%);
+  background: black;
+  width: 300px;
+  padding: 0px 50px;
+  border: 5px solid #800080;
+  color: #800080;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  z-index: 2;
 }
-.button:after, .button:before 
-{
-    
-    top: 100%;
-    left: 0;
-    bottom: -10px;
-    content: '';
-    z-index: 1;
+.button:after,
+.button:before {
+  top: 100%;
+  left: 0;
+  bottom: -10px;
+  content: "";
+  z-index: 1;
 }
 .button:before {
-    background: #4ac0ee;
-    top: 10px;
-    left: -1px;
-    height: 100%;
-    width: 15px;
+  background: #4ac0ee;
+  top: 10px;
+  left: -1px;
+  height: 100%;
+  width: 15px;
 }
 .button:after {
-    background: #4ac0ee;
-    right: 0px;
-    left: -1px;
-    height: 15px;
+  background: white;
+  right: 0px;
+  left: -1px;
+  height: 15px;
 }
 .button:hover {
-    background: #4ac0ee;
-    color: #fff;
-    margin-bottom: -1px;
+  background: white;
+  color: #800080;
+  margin-bottom: -1px;
 }
-.button:hover:after, .button:hover:before {
-    top: 100%;
-    left: 0;
-    bottom: 0px;
+.button:hover:after,
+.button:hover:before {
+  top: 100%;
+  left: 0;
+  bottom: 0px;
 }
 .button:hover:before {
-    top: 0px;
-    left: 0px;
-    width: 0px;
+  top: 0px;
+  left: 0px;
+  width: 0px;
 }
 .button:hover:after {
-    right: 0px;
-    left: 0px;
-    height: 0px;
+  right: 0px;
+  left: 0px;
+  height: 0px;
 }
-
-
-
-
-
-
-
-
-

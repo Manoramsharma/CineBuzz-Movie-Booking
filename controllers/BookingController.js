@@ -1,7 +1,12 @@
-const { pool } = require("../dbConfig");
+require('dotenv').config();
+
+const { pool } = require("../configs/db");
+
+
 
 module.exports.createBooking = async (req, res) => {
   var user_id = req.user_id;
+  var email=req.email;
   var movie_id = req.body.movie_id;
   var seat_numbers = req.body.seat_numbers;
 
@@ -29,15 +34,20 @@ module.exports.createBooking = async (req, res) => {
         "One or more seats have already been booked. Please try again with different seats",
     });
   } else {
-    const booking_query_data= await pool.query(`INSERT INTO bookings (user_id,movie_id,price,date) VALUES ('${user_id}' , ${movie_id} , ${price} , '${date}') RETURNING *;`)
-   const booking_data= booking_query_data.rows[0];
-   //console.log({booking_data});
-   const {booking_id} = booking_data;
+    const booking_query_data = await pool.query(
+      `INSERT INTO bookings (user_id,movie_id,price,date) VALUES ('${user_id}' , ${movie_id} , ${price} , '${date}') RETURNING *;`
+    );
+    const booking_data = booking_query_data.rows[0];
+    //console.log({booking_data});
+    const { booking_id } = booking_data;
 
-   const seats_insert_string= seat_numbers.map(seat_number=>`(${movie_id},${seat_number},${booking_id})`).join(",");
+    const seats_insert_string = seat_numbers
+      .map((seat_number) => `(${movie_id},${seat_number},${booking_id})`)
+      .join(",");
 
-   const seats_created_query= await pool.query(`INSERT INTO seats_occupancy (movie_id,seat_number,booking_id) VALUES ${seats_insert_string};`)
-
+    const seats_created_query = await pool.query(
+      `INSERT INTO seats_occupancy (movie_id,seat_number,booking_id) VALUES ${seats_insert_string};`
+    );
 
     return res.status(200).json({
       message: `Booking done for ${user_id}`,
@@ -63,3 +73,70 @@ module.exports.getBooking = async (req, res) => {
     bookingData: bookingData,
   });
 };
+
+module.exports.getSeatsOccupancy = async (req, res) => {
+  let seatsData = [];
+  let client = null;
+  let movie_id= req.params.movie_id;
+  try {
+    client = await pool.connect();
+    const result = await client.query(
+      `SELECT * FROM seats_occupancy where movie_id='${movie_id}'`
+    );
+    seatsData = result.rows;
+  } finally {
+    client.release();
+  }
+
+  return res.status(200).json({
+    message: "Success",
+    seatsData: seatsData,
+  });
+};
+
+/*module.exports.sendEmail=(req,res)=>{
+  const nodemailer = require("nodemailer");
+
+const  transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+        type: 'OAuth2',
+        user: process.env.MAIL,
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET,
+        refreshToken: process.env.REFRESH_TOKEN,
+        accessToken: process.env.ACCESS_TOKEN
+    }
+});
+
+
+const mail = {
+  from: "pandey.aditya4272@gmail.com",
+  to: `${email}`,
+  subject: "Booking successfully done",
+  text: "You successfully booked tickets at CineBuzz",
+  html: "<p>You successfully registered an account at www.mydomain.com</p>"
+}
+
+transporter.sendMail(mail, function(err, info) {
+  if (err) {
+      console.log(err);
+  } else {
+      // see https://nodemailer.com/usage
+      console.log("info.messageId: " + info.messageId);
+      console.log("info.envelope: " + info.envelope);
+      console.log("info.accepted: " + info.accepted);
+      console.log("info.rejected: " + info.rejected);
+      console.log("info.pending: " + info.pending);
+      console.log("info.response: " + info.response);
+  }
+  transporter.close();
+});
+
+}*/
+
+
+
+

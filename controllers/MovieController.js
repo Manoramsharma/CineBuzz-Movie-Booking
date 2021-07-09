@@ -1,4 +1,4 @@
-const { pool } = require("../dbConfig");
+const { pool } = require("../configs/db");
 
 module.exports.getAllMovies = async function(req,res)
 {

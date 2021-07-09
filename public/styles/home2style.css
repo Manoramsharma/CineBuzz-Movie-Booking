@@ -4,6 +4,14 @@
    box-sizing: border-box;
    text-decoration: none;
 }
+body
+{
+  background-image: url('../assests/movie.gif');
+  background-repeat: repeat;
+
+}
+
+
 .logo{
   position: absolute;
 align-self: flex-start;  
@@ -158,13 +166,14 @@ position: absolute;
 }
 }
 .slide{
-  height: 250px;
-  width: 250px;
+  height: 100px;
+  width: 300px;
   display: flex;
   align-items: center;
   padding: 15px;
   perspective: 100px;
 }
+
 
 .slide img{
   width: 100%;

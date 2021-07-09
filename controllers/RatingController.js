@@ -1,4 +1,4 @@
-const { pool } = require("../dbConfig");
+const { pool } = require("../configs/db");
 
 module.exports.giveRating = (req, res) => {
   var rating_number = req.body.rating_number;

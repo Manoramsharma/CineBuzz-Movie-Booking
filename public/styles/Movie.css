@@ -10,8 +10,9 @@
 }
 
 body{
-    background-color: var(--primary-color);
-    font-family: 'Poppins', sans-serif;
+    background-color: #e84393;
+    background-image: linear-gradient(315deg, #e84393 0%, #000000 74%);
+    font-family: 'Ubuntu', sans-serif;
     margin: 0;
 }
 

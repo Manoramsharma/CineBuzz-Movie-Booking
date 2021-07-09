@@ -207,6 +207,7 @@ function showMovies(data) {
         const movieEl = document.createElement('div');
         movieEl.classList.add('movie');
         movieEl.innerHTML = `
+            <a href="/book?movie_id=${id}">
             <img src="${poster_path? IMG_URL+poster_path: "http://via.placeholder.com/1080x1580" }" alt="${title}">
             <div class="movie-info">
                 <h3>${title}</h3>
@@ -218,6 +219,7 @@ function showMovies(data) {
                 <br/> 
                 <button class="know-more" id="${id}">Know More</button
             </div>
+            </a>
         
         `
 

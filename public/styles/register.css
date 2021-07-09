@@ -1,158 +1,151 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+body {
+  background-color: #e84393;
+  background-image: linear-gradient(315deg, #e84393 0%, #000000 74%);
+  font-family: "Ubuntu", sans-serif;
 }
 
-body{
-    height: 100vh;
-    width: 100%;
-    background: linear-gradient(45deg ,#FF9CE3, #4AB3FF);
-    overflow: hidden;
-    /*opacity:0;*/
-    /*transition: opacity 1s ease;*/
-    
+.main {
+  background-color: #ffffff;
+  width: 400px;
+  height: 510px;
+  margin: 7em auto;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 }
 
-.visible{
-    opacity:1;
+.sign {
+  padding-top: 40px;
+  color: #800080;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 23px;
 }
 
-.main-container{
-    height: 70vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-around;
-    padding: 50px;
-
+.un {
+  width: 76%;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(136, 126, 126, 0.04);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.signIncontainer
-{
-    width: 350px;
-    height: 450px;
-    background: lightblue;
-    padding: 20px;
-    border: 5px solid white;
-    background: rgba(255,255,255,0.4);
-    backdrop-filter: blur(6px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10px;
-    border-radius: 40px;
-    margin-top: 60px;
-}
-
-.signIN
-{
-    font-size: 40px;
-    font-weight: bolder;
-    color: black;
-}
-
-.loginCard
-{
-    border:none;
-    height: 7%;
-    width:75%;
-    border-radius: 15px;
-    color: black;
-    padding: 10px;
-    text-align: center;
-}
-
-.passwordLogin
-{
-    border:none;
-    height: 7%;
-    width:75%;
-    border-radius: 15px;
-    color: black;
-    padding: 10px;
-    text-align: center;
-}
-
-.sign-in-button
-{
-    width: 40%;
-    text-align: center;
-    font-size: 20px;
-    font-weight:550;
-    color:black;
-    cursor: pointer;
-    background: rgba(255,255,255,0.3);
-    padding: 5px;
-    border-radius: 13px;
-    border: 1px solid white;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+.name{
+  width: 76%;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(136, 126, 126, 0.04);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: "Ubuntu", sans-serif;
 
 }
 
-.signUpcontainer
-{
-    width: 350px;
-    height: 450px;
-    background: lightblue;
-    padding: 20px;
-    border: 5px solid white;
-    background: rgba(255,255,255,0.4);
-    backdrop-filter: blur(6px);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10px;
-    border-radius: 40px;
-    margin-top: 60px;
+form.form1 {
+  padding-top: 40px;
 }
 
-.signUp
-{
-    font-size: 40px;
-    font-weight: bolder;
-    color: black;
+.pass {
+  width: 76%;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(136, 126, 126, 0.04);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.userSignUp
-{
-    border:none;
-    height: 7%;
-    width:75%;
-    border-radius: 15px;
-    color: black;
-    padding: 10px;
-    text-align: center;
+.confirmPass{
+  width: 76%;
+  color: rgb(38, 50, 56);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(136, 126, 126, 0.04);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
+  margin-left: 46px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.sign-up-button
-{
-    width:60%;
-    text-align: center;
-    font-size: 18px;
-    font-weight:550;
-    color:black;
-    cursor: pointer;
-    background: rgba(255,255,255,0.3);
-    padding: 5px;
-    border-radius: 13px;
-    border: 1px solid white;
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+.un:focus,
+.pass:focus,
+.confirmPass:focus,
+.name:focus {
+  border: 2px solid rgba(0, 0, 0, 0.18) !important;
 }
 
-.OR
-{
-    text-align: center;
-    margin-top: 30px;
-    font-size: 25px;
-    text-decoration:solid;
+.submit {
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(to right, #9c27b0, #e040fb);
+  border: 0;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: "Ubuntu", sans-serif;
+  margin-left: 35%;
+  font-size: 13px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
 }
 
+.forgot {
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+  color: #800080;
+  padding-top: 15px;
+}
+.forgot:hover{
+  cursor:pointer;
+}
 
+a {
+  text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+  color: #e1bee7;
+  text-decoration: none;
+}
 
+@media (max-width: 600px) {
+  .main {
+    border-radius: 0px;
+  }
+}
